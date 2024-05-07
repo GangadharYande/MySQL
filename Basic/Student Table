@@ -1,0 +1,37 @@
+Create database School;
+
+use School;
+CREATE Table Batches(
+	batch_id int primary key,
+    batch_name varchar(50) not null);
+
+CREATE Table Students(
+Student_id int auto_increment primary key,
+first_name varchar(50) not null,
+last_name varchar(50) not null,
+batch_id int,
+foreign key(batch_id) references batches(batch_id) ON DELETE CASCADE ON UPDATE CASCADE
+);
+
+-- Inserting Dummy data int batches table 
+
+
+INSERT INTO batches(batch_id, batch_name) VALUES
+(1, 'Batch A'),
+(2, 'Batch B'),
+(3, 'Batch C');
+
+INSERT INTO students(first_name , last_name , batch_id) values
+("John","Deo",1),
+("Jane","Deo",1),
+("Jim","Brown",2),
+("Jenny","Smith",3),
+("Jack","Jonhson",2);
+
+Delete From batches
+where batch_id =1;
+
+-- ALTER table batches
+-- add foreign key(batch_name)
+-- references students(batch_id)
+-- on delete cascade on update cascade
