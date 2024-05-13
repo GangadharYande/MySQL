@@ -67,7 +67,7 @@ The SELECT statement is used to retrieve data from one or more tables in a datab
 ### Syntax:
 
 ```sql
-SELECT column1, column2, ...
+SELECT column1, column2, ... (All return colums)
 FROM table_name;
 ```
 ### WHERE Clause
